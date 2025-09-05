@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome | My Website</title>
+  <title>🚀 Welcome | My Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="glow"></div>
-  <div class="glow"></div>
+  <!-- 🔮 เอฟเฟกต์ Background -->
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
 
   <button class="theme-toggle" id="themeBtn">🌙 Dark</button>
 
-  <h1>🌐 My Website</h1>
-  <p>ยินดีต้อนรับ! กดปุ่มด้านล่างเพื่อเข้าสู่หน้าหลัก</p>
-  <button class="btn" onclick="go()">🚀 เข้าสู่ระบบ</button>
+  <div class="card hero">
+    <h1 class="title">🌐 My Website</h1>
+    <p class="subtitle">เชื่อมต่อทุกการเข้าถึงได้ง่าย รวดเร็ว และปลอดภัย</p>
 
-  <footer>© 2025 My Website</footer>
+    <button class="btn big" onclick="go()">🚀 เริ่มต้นการใช้งาน</button>
+  </div>
+
+  <footer class="muted">© 2025 My Website | All rights reserved</footer>
 
   <script>
     async function go(){
@@ -24,7 +29,6 @@
         const res = await fetch('links.json');
         const data = await res.json();
         if(data.urls && data.urls.length > 0){
-          // ส่งไป Loader โดยเริ่มจาก link ตัวแรก
           window.location.href = `loading.html?i=0`;
         } else {
           alert("❌ ไม่มีลิงก์ใน links.json");
