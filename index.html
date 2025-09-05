@@ -1,49 +1,45 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="lo">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🚀 Welcome | LEGEND147</title>
+  <title>LEGEND147 — ເວັບອັນດັບ 1 ລາວ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 🔮 เอฟเฟกต์ Background -->
-  <div class="orb orb1"></div>
-  <div class="orb orb2"></div>
-  <div class="orb orb3"></div>
+  <div class="container">
+    
+    <header>
+      <div class="logo-circle">LEGEND147</div>
+      <h1>LEGEND147 — ເວັບອັນດັບ 1 ລາວ</h1>
+      <p class="subtitle">
+        ບໍລິການມັ່ນໃຈ · ລະບົບ Auto ຜ່ານ-ຖອນໄວ · ປອດໄພ · ຮອງຮັບທຸກອຸປະກອນ · ສາມາດໃຊ້ງານຜ່ານ VPN
+      </p>
+    </header>
 
-  <button class="theme-toggle" id="themeBtn">🌙 Dark</button>
+    <!-- 🔗 ปุ่มลิงก์หลัก -->
+    <div class="links">
+      <a href="viewer.html?i=0" class="link-btn">🟡 ເຂົ້າລະບົບหลัก (Auto Fallback)</a>
+      <a href="https://wa.me/123456" target="_blank" class="link-btn">💬 ຕິດຕໍ່ຜ່ານ WhatsApp ທີ່1</a>
+      <a href="https://wa.me/654321" target="_blank" class="link-btn">💬 ຕິດຕໍ່ຜ່ານ WhatsApp ທີ່2</a>
+      <a href="https://facebook.com" target="_blank" class="link-btn">📘 ເຂົ້າກຸ່ມ Facebook</a>
+    </div>
 
-  <div class="card hero">
-    <h1 class="title">🌐 LEGEND147</h1>
-    <p class="subtitle">เชื่อมต่อทุกการเข้าถึงได้ง่าย รวดเร็ว และปลอดภัย</p>
+    <!-- 📌 การ์ดข้อมูล -->
+    <div class="info-section">
+      <div class="info-card">
+        <h3>ໄວ · ປອດໄພ · ບໍລິການ 24/7</h3>
+        <p>ຜ່ານ-ຖອນອັດຕະໂນມັດ ຮອງຮັບທຸກທະນາຄານ ແລະມີທີມງານດູແລຕະຫຼອດເວລາ</p>
+      </div>
+      <div class="info-card">
+        <h3>ຮອງຮັບຫຼາຍອຸປະກອນ</h3>
+        <p>ເຂົ້າໄດ້ທັງໂທລະສັບ, ແທັບເລັດ, ແລະຄອມພິວເຕີ</p>
+      </div>
+    </div>
 
-    <button class="btn big" onclick="go()">🚀 เริ่มต้นการใช้งาน</button>
+    <footer>
+      © 2025 LEGEND147 · ບໍລິການ 24/7
+    </footer>
   </div>
-
-  <footer class="muted">© 2025 My Website | All rights reserved</footer>
-
-  <script>
-    async function go(){
-      try {
-        const res = await fetch('links.json');
-        const data = await res.json();
-        if(data.urls && data.urls.length > 0){
-          window.location.href = `loading.html?i=0`;
-        } else {
-          alert("❌ ไม่มีลิงก์ใน links.json");
-        }
-      } catch(e){
-        alert("⚠️ โหลด links.json ไม่สำเร็จ");
-      }
-    }
-
-    // Toggle theme
-    const themeBtn=document.getElementById('themeBtn');
-    themeBtn.addEventListener('click',()=>{
-      document.body.classList.toggle('light');
-      themeBtn.textContent=document.body.classList.contains('light')?'🌞 Light':'🌙 Dark';
-    });
-  </script>
 </body>
 </html>
